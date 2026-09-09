@@ -1,22 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
-    <title>Porfolio</title>
+
+    <title>Mi Portafolio</title>
 </head>
+
 <body>
-    <main>
-        <h1>Welcome to My Portfolio</h1>
-        <section>
-            <h2>About Me</h2>
-            <p>This is a brief introduction about myself.</p>
+    <header>
+        <nav class="navbar" aria-label="Navegación principal">
+            <a href="#inicio" class="logo">Mi Portafolio</a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Abrir menú de navegación"
+                aria-expanded="false"
+                aria-controls="navList"
+            >
+                ☰
+            </button>
+
+            <ul class="nav-list" id="navList">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Sobre mí</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Habilidades</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Proyectos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#design-system">Diseño</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <section id="about" class="section about-section">
+            <div class="section-heading">
+                <span class="section-label">Perfil profesional</span>
+
+                <h1>Bienvenido a mi Portafolio</h1>
+
+                <p>
+                    Conoce mi perfil profesional, formación, tecnologías e
+                    información de contacto.
+                </p>
+            </div>
+
+            <div class="profile-layout">
+
+              
+                <div class="id-card-container">
+                    <div
+                        class="id-card"
+                        id="aboutCard"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Mostrar información sobre mí"
+                        aria-pressed="false"
+                    >
+                        <div class="id-card-inner">
+
+                       
+                            <article class="id-card-front">
+                                <div class="id-card-top">
+                                    <span class="id-card-type">PORTAFOLIO</span>
+                                    <span class="id-card-status">ACTIVO</span>
+                                </div>
+
+                                <div class="id-card-photo">
+                                    <img
+                                        src="carnet.jpg"
+                                        alt="Foto de perfil de TU NOMBRE COMPLETO"
+                                    >
+                                </div>
+
+                                <div class="id-card-main-info">
+                                    <p class="id-card-label">
+                                        ESTUDIANTE / DESARROLLADOR
+                                    </p>
+
+                                    <h2>Francisco Javier Ronquillo Jimenez</h2>
+
+                                    <p class="id-card-role">
+                                        Desarrollo de Software e IA
+                                    </p>
+                                </div>
+
+                                <div class="id-card-footer">
+                                    <span>Haz clic para voltear</span>
+                                    <span class="id-card-icon">↻</span>
+                                </div>
+                            </article>
+
+                            
+                            <article class="id-card-back">
+                                <div class="id-card-top">
+                                    <span class="id-card-type">SOBRE MÍ</span>
+                                    <span class="id-card-status">PERFIL</span>
+                                </div>
+
+                                <h2>Descripción profesional</h2>
+
+                                <p>
+                                    Soy estudiante de ingeniería de software en
+                                    Milagro, interesado en desarrollo web,
+                                    inteligencia artificial, bases de datos y
+                                    automatización. Me gusta crear soluciones
+                                    prácticas mediante código y aprender nuevas
+                                    tecnologías para resolver problemas reales.
+                                </p>
+
+                                <div class="id-card-back-tags">
+                                    <span>Desarrollo web</span>
+                                    <span>IA</span>
+                                    <span>Bases de datos</span>
+                                </div>
+
+                                <button
+                                    class="btn-close"
+                                    id="btnClose"
+                                    type="button"
+                                    aria-label="Volver al frente de la cédula"
+                                >
+                                    Volver al frente
+                                </button>
+                            </article>
+
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="professional-info">
+
+                    <article class="info-block">
+                        <span class="info-number">01</span>
+
+                        <div>
+                            <h2>Perfil profesional</h2>
+
+                            <p>
+                                Estudiante y desarrollador en formación, enfocado
+                                en desarrollo web, inteligencia artificial, visión
+                                por computadora, bases de datos y sistemas de software.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="info-block">
+                        <span class="info-number">02</span>
+
+                        <div>
+                            <h2>Formación e intereses</h2>
+
+                            <p>
+                                Estudiante de Ingeniería de Software en
+                                <strong>Universidad Estatal de Milagro</strong>. Interesado en
+                                redes neuronales, aplicaciones web, bases de
+                                datos, automatización industrial y gestión de
+                                proyectos tecnológicos.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="info-block">
+                        <span class="info-number">03</span>
+
+                        <div>
+                            <h2>Tecnologías</h2>
+
+                            <div class="tech-list">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Git</span>
+                                <span class="tech-tag">GitHub</span>
+                                <span class="tech-tag">React</span>
+                                
+                            </div>
+
+                            <p class="info-note">
+                                Tecnologías que domino o que estoy aprendiendo.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="info-block info-contact">
+                        <span class="info-number">04</span>
+
+                        <div>
+                            <h2>Contacto profesional</h2>
+
+                            <address class="contact-list">
+                                <a href="mailto:TU_CORREO@email.com">
+                                    ✉ 
+                                </a>
+
+                                <a
+                                    href="https://github.com/TU_USUARIO"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    ◉
+                                </a>
+
+                                <a
+                                    href="https://www.linkedin.com/in/TU_USUARIO"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    in
+                                </a>
+
+                                <span></span>
+                            </address>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
         </section>
-        <section>Skills</section>
-        <section>Projects</section>
-        <section>Design System</section>
-        <section>Contact</section>
+
+        <section id="skills" class="section simple-section">
+            <h2>Habilidades</h2>
+            <p>
+                
+            </p>
+        </section>
+
+        <section id="projects" class="section simple-section">
+            <h2>Proyectos</h2>
+            <p>
+                
+            </p>
+        </section>
+
+        <section id="design-system" class="section simple-section">
+            <h2>Sistema de diseño</h2>
+            <p>
+               
+            </p>
+        </section>
+
+        <section id="contact" class="section simple-section">
+            <h2>Contacto</h2>
+            <p>
+                Escríbeme a:
+                <a href="mailto:TU_CORREO@email.com">
+                    
+                </a>
+            </p>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Francisco Javier Ronquillo Jimenez. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="funcionalidades.js"></script>
 </body>
 </html>
