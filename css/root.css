@@ -1,0 +1,56 @@
+:root {
+ 
+  --color-bg: #0b0709;
+  --color-bg-alt: #14090c;
+  --color-surface: #1c0f13;
+  --color-surface-hover: #26141a;
+  --color-border: rgba(217, 163, 90, 0.28);
+
+
+  --color-text: #ece2d8;
+  --color-text-muted: #b7a595;
+  --color-text-subtle: #8a7568;
+
+  --color-accent: #d9a35a;
+  --color-accent-hover: #c81e3a;
+  --color-accent-soft: #d9a35a1A;
+
+  --color-success: #6f9e5b;
+  --color-warning: #d9a35a;
+  --color-error: #c81e3a;
+  --color-info: #7a9bb0;
+
+  
+  --font-title: "Cinzel", "Spectral SC", serif;
+  --font-body: "EB Garamond", "Alegreya Sans", sans-serif;
+  --font-names: "Cinzel Decorative", "Caesar Dressing", cursive;
+  --font-subtitle: "Cinzel", "Crimson Text", serif;
+  --font-details: "EB Garamond", "Alegreya Sans SC", sans-serif;
+  --font-primary: "Cinzel", "Inter", system-ui, sans-serif;
+  --font-mono: "Fira Code", "JetBrains Mono", monospace;
+
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.75rem;
+  --font-size-2xl: 2.5rem;
+  --line-height-base: 1.6;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --border-width: 1px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 14px rgba(200, 30, 58, 0.25);
+  --shadow-lg: 0 10px 34px rgba(0, 0, 0, 0.55), 0 0 24px rgba(217, 163, 90, 0.12);
+
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+}
