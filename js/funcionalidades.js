@@ -182,26 +182,37 @@ function openProjectGallery(projectKey) {
     return;
   }
 
-
+  /* Título dinámico */
   modalProjectTitle.textContent = project.title;
 
- 
+  /* Elimina la galería del proyecto abierto anteriormente */
   projectGallery.innerHTML = "";
 
-  
+  /* Agrega las imágenes del proyecto actual */
   project.images.forEach((image) => {
     projectGallery.append(createGallerySlide(image));
   });
 
-  
-  projectGallery.scrollLeft = 0;
-
-  
+  /* Abre el modal primero */
   if (!projectModal.open) {
     projectModal.showModal();
   }
-}
 
+  /* FIX: se espera al siguiente frame de render, cuando el navegador
+     ya recalculo el ancho real de la galeria con las nuevas imagenes,
+     y se usa scrollTo con behavior "instant" para saltar directo a
+     la primera imagen sin animacion y sin que el scroll-snap ignore
+     el cambio. */
+  requestAnimationFrame(() => {
+    projectGallery.scrollTo({ left: 0, behavior: "instant" });
+
+    /* Si tienes las mejoras de contador/dots agregadas antes,
+       vuelve a sincronizar el estado aqui tambien */
+    if (typeof updateGalleryState === "function") {
+      updateGalleryState();
+    }
+  });
+}
 
 galleryButtons.forEach((button) => {
   button.addEventListener("click", () => {
